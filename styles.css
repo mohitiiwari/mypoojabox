@@ -1,0 +1,679 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: #e91e63 !important;
+    color: white !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    padding: 5px !important;
+    
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none !important;
+    background-color: white !important;
+    padding: 10px !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) !important;
+    position: relative !important;
+}
+
+.mobile-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.menu-btn {
+    font-size: 22px !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.logo {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #c09c63 !important;
+    text-decoration: none !important;
+}
+
+.icons {
+    display: flex !important;
+    gap: 15px !important;
+}
+
+.icons a {
+    text-decoration: none !important;
+    color: black !important;
+    font-size: 22px !important;
+    position: relative !important;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none !important;
+    flex-direction: column !important;
+    background: #fff !important;
+    padding: 10px 0 !important;
+    text-align: center !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.mobile-menu a {
+    display: block !important;
+    padding: 10px !important;
+    text-decoration: none !important;
+    color: black !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border-bottom: 1px solid #ddd !important;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none !important;
+}
+
+.mobile-menu.active {
+    display: flex !important;
+}
+
+/* Wishlist & Cart Badge */
+.wishlist-badge {
+    position: absolute !important;
+    top: -5px !important;
+    right: -5px !important;
+    background: red !important;
+    color: white !important;
+    font-size: 12px !important;
+    width: 16px !important;
+    height: 16px !important;
+    text-align: center !important;
+    border-radius: 50% !important;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    background: white !important;
+    padding: 10px 20px !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.desktop-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.nav-links {
+    display: flex !important;
+    gap: 20px !important;
+}
+
+.nav-links a {
+    text-decoration: none !important;
+    color: black !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+.desktop-icons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important; /* Adjust spacing between icons */
+}
+
+.desktop-icons a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    color: #333 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.desktop-icons i {
+    font-size: 24px !important;
+    margin-bottom: 5px !important;
+}
+
+/* Wishlist & Cart Badge */
+.wishlist-badge {
+    position: absolute !important;
+    top: -8px !important; /* Adjust to match screenshot */
+    right: -10px !important;
+    background: red !important;
+    color: white !important;
+    font-size: 12px !important;
+    width: 16px !important;
+    height: 16px !important;
+    text-align: center !important;
+    border-radius: 50% !important;
+    font-weight: bold !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .desktop-icons {
+        display: none !important;
+    }
+}
+
+.logo img {
+    height: 80px !important; /* Adjust height to match screenshot */
+    width: auto !important; /* Maintain aspect ratio */
+    display: block !important; /* Prevent extra spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none !important;
+    }
+    .mobile-nav {
+        display: block !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none !important;
+    }
+    .desktop-nav {
+        display: flex !important;
+    }
+}
+
+/* ----------------- Video Section ------------------- */
+.video-link-part {
+    height: 100vh !important; 
+    width: 100% !important;
+    display: flex !important; 
+    justify-content: center !important; 
+    align-items: center !important; 
+    overflow: hidden !important;
+    position: relative !important;
+    background: none !important; /* Remove any black background */
+}
+
+/* Fullscreen Video - Prevent Zooming */
+.video-link-part video {
+    height: 100% !important; 
+    width: 100% !important; /* Maintain aspect ratio */
+    max-width: 97% !important;
+    object-fit: cover !important; /* Prevent cropping */
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; /* Center the video */
+    background: none !important;
+}
+
+/* Video Overlay for Better Visibility */
+.video-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.4) !important; /* Optional: Keep or remove */
+    z-index: 1 !important;
+}
+
+/*owl carousellllll*/
+
+        /* Carousel Styles */
+        .carousel-container {
+            width: 90% !important;
+            margin: auto !important;
+            padding: 20px 0 !important;
+            text-align: center !important;
+            position: relative !important;
+        }
+
+        .owl-carousel .item {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+
+        .owl-carousel .item img {
+            width: 150px !important;
+            height: 150px !important;
+            object-fit: cover !important;
+            border-radius: 50% !important;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+            border: 3px solid #fff !important;
+        }
+
+        /* Navigation Buttons */
+        .owl-nav {
+            position: absolute !important;
+            top: 50% !important;
+            width: 100% !important;
+            transform: translateY(-50%) !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            pointer-events: none !important; /* Prevent blocking interaction with images */
+        }
+/* Ensures each item has a proper structure */
+.item {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Image styling */
+.item img {
+    width: 100% !important;
+    max-width: 300px !important; /* Adjust as needed */
+    height: auto !important;
+}
+
+/* Caption styling */
+.caption {
+    margin-top: 5px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    text-align: center !important;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+    display: none !important;
+}
+      
+/* Text on Video */
+.video-content {
+    position: relative !important;
+    z-index: 2 !important;
+    color: white !important;
+    text-align: center !important;
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .video-link-part {
+        height: 70vh !important; 
+    }
+
+    .video-content {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-link-part {
+        height: 30vh !important; 
+        background-color: #fff !important; /* Ensure full white background */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .video-link-part video {
+        object-fit: contain !important; /* Ensure full video is visible */
+        background-color: #fff !important; /* Remove black background */
+    }
+
+    .video-content {
+        font-size: 1.2rem !important;
+    }
+   
+
+}
+
+
+ /* second and on carousels */
+.custom-carousel-container {
+    width: 95%;
+    margin: auto;
+}
+.custom-item {
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.custom-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.custom-caption {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.custom-price {
+    font-size: 14px;
+    color: green;
+    margin: 5px 0;
+}
+.custom-add-to-cart {
+    background-color: #e91e63;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.custom-owl-carousel .owl-nav button.owl-next, 
+.custom-owl-carousel .owl-nav button.owl-prev, 
+.custom-owl-carousel button.owl-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+    display: none !important;
+}
+
+.pooja-room-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    width: 94%;
+    margin-left: 3%;
+}
+
+.pooja-room-details {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+
+.pooja-room-details h5 {
+    margin: 0 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.custom-view-all {
+    background-color: #e91e63 !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 16px !important;
+    cursor: pointer !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+}.custom-item {
+    position: relative;
+}
+
+.custom-like-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.custom-like-button:hover {
+    color: #ff6347;  /* Change color on hover (tomato red) */
+}
+
+ /* Customer reviewsss */
+.carousel-container-unique {
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.review-list-unique {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+}
+
+.review-item-unique {
+    flex: 0 0 25%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.review-item-unique img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-content-unique {
+    flex: 1;
+}
+
+.review-name-unique {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-stars-unique {
+    color: #f90;
+    margin-bottom: 5px;
+}
+
+.review-text-unique {
+    font-size: 14px;
+}
+
+.nav-button-unique {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.prev-button-unique {
+    left: 0;
+}
+
+.next-button-unique {
+    right: 0;
+}
+
+
+.content-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.read-more {
+    font-size: 18px;
+    color: #e91e63;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.read-more:hover {
+    color: #fe0055;
+}
+
+
+.footer {
+    background-color: #fe0055; /* Primary color */
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-section {
+    flex: 1 1 220px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-section img {
+    max-width: 100%;
+}
+
+.footer-section h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #ffffff; /* Heading color */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #ffffff; /* Link color matching the background */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #f39c12; /* Gold-ish color for hover effect */
+}
+
+.social-links {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-links a {
+ 
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.app-links img {
+    height: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.app-links img:hover {
+    transform: scale(1.05);
+}
+
+.bottom-bar {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-bar select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .app-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app-links img {
+        margin-bottom: 10px;
+    }
+
+    .bottom-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+.pooja-room-details h5 {
+    font-style: italic;
+}
